@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+
+    <RelativeLayout
+    android:id="@+id/activity_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,12 +13,36 @@
     android:paddingBottom="16dp"
     tools:context="com.example.myapp.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="204dp"
+        android:layout_height="40"
+        android:layout_centerHorizontal="true"
+        android:textSize="32dp"
+        android:text="Myapp" />
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="274dp"
         android:layout_height="74dp"
-        android:text="French"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="107dp"
+        android:text="Français"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="274dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="238dp"
+        android:text="English"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp" />
 </RelativeLayout>

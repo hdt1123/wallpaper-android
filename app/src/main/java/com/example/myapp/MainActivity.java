@@ -21,15 +21,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
-       Button button = (Button) findViewById(R.id.button);
-       button.setOnClickListener(new View.OnClickListener() {
+       Button buttonf = (Button) findViewById(R.id.oneButton);
+       buttonf.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view){
-               setWallpaper();
+               setWallpaperf();
            }
        });
+        Button buttone = (Button) findViewById(R.id.twoButton);
+        buttone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                setWallpapere();
+            }
+        });
     }
-    private void setWallpaper(){
+    private void setWallpaperf(){
+        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
+        Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.lockfr);
+        WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
+        try{
+            manager.setBitmap(bitmap); //set homepage
+            WallpaperManager. setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
+            Toast.makeText(this, "Wallpaper set!", Toast.LENGTH_SHORT).show();
+        }catch(IOException e){
+            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+     private void setWallpapere(){
         Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
         Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.lockfr);
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());

@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
      private void setWallpapere(){
-        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
-        Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.lockfr);
+        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.homeen);
+        Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.locken);
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
         try{
             manager.setBitmap(bitmap); //set homepage

@@ -13,14 +13,7 @@
     android:paddingBottom="16dp"
     tools:context="com.example.myapp.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="204dp"
-        android:layout_height="40"
-        android:layout_centerHorizontal="true"
-        android:textSize="32dp"
-        android:text="Myapp" />
-
+  
 
     <Button
         android:id="@+id/button"

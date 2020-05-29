@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
         try{
             manager.setBitmap(bitmap); //set homepage
-            WallpaperManager. setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
+            manager. setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
             Toast.makeText(this, "Wallpaper set!", Toast.LENGTH_SHORT).show();
         }catch(IOException e){
             Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
         try{
             manager.setBitmap(bitmap); //set homepage
-            WallpaperManager.setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
+            manager.setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
             Toast.makeText(this, "Wallpaper set!", Toast.LENGTH_SHORT).show();
         }catch(IOException e){
             Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();

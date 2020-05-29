@@ -21,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
-       Button buttonf = (Button) findViewById(R.id.oneButton);
+       Button buttonf = (Button) findViewById(R.id.buttonOne);
        buttonf.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view){
                setWallpaperf();
            }
        });
-        Button buttone = (Button) findViewById(R.id.twoButton);
+        Button buttone = (Button) findViewById(R.id.buttonTwo);
         buttone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="survey">Survey</string>
+    <string name="lan">Language</string>
+    <string name="con">CONSENT FORM</string>
 </resources>
+//English version app

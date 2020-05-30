@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
            public void onClick(View view){
                setWallpaperf();
                setAppLocale("fr");
-               Intent i = new Intent( android.provider.Settings.ACTION_LOCALE_SETTINGS );
-               startActivity( i );
+               setSystemLocale();
            }
        });
         Button buttone = (Button) findViewById(R.id.buttonTwo);
@@ -49,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 setWallpapere();
                 setAppLocale("en");
-                Intent i = new Intent( android.provider.Settings.ACTION_LOCALE_SETTINGS );
-                startActivity( i );
+                setSystemLocale();
             }
         });
         Button buttth = (Button) findViewById(R.id.buttonThree);
@@ -113,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
+    }
+    private void setSystemLocale(){
+        Intent i = new Intent( android.provider.Settings.ACTION_LOCALE_SETTINGS );
+        startActivity( i );
     }
 }
 

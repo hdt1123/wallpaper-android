@@ -19,32 +19,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="50dp"
             android:text="@string/lan"
             android:textColor="#f00"
             android:textSize="25sp"
             android:textStyle="bold|italic"
-            android:layout_marginStart="120dp" />
-    <TextView
-        android:id="@+id/simpleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp"
-        android:text="REDCap"
-        android:textColor="#f00"
-        android:textSize="25sp"
-        android:textStyle="bold|italic"
-        android:layout_marginStart="455dp" />
+            android:layout_centerHorizontal="true" />
 
-        <Button
+    <Button
         android:id="@+id/buttonOne"
         android:layout_width="274dp"
         android:layout_height="74dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="107dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="176dp"
         android:text="français"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp" />
@@ -55,38 +46,12 @@
         android:layout_height="74dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="225dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="326dp"
         android:text="English"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp" />
 
-    <Button
-        android:id="@+id/buttonThree"
-        android:layout_width="274dp"
-        android:layout_height="74dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="383dp"
-        android:layout_marginTop="107dp"
-        android:autoLink="web"
-        android:clickable="true"
-        android:onClick="goToUrl"
-        android:text="@string/survey"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="379dp" />
-    <Button
-        android:id="@+id/buttonFour"
-        android:layout_width="274dp"
-        android:layout_height="74dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="383dp"
-        android:layout_marginTop="225dp"
-        android:autoLink="web"
-        android:clickable="true"
-        android:onClick="goToUrl"
-        android:text="@string/con"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="379dp" />
+
 </RelativeLayout>

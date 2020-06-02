@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
        buttonf.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view){
-               setWallpaperf();
+              // setWallpaperf();
                setAppLocale("fr");
                setSystemLocale();
            }
@@ -46,33 +46,40 @@ public class MainActivity extends AppCompatActivity {
         buttone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                setWallpapere();
+               // setWallpapere();
                 setAppLocale("en");
                 setSystemLocale();
             }
         });
-        Button buttth = (Button) findViewById(R.id.buttonThree);
-        buttth.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                goToUrl("http://stackoverflow.com/");
-            }
-        });
-        Button buttfo = (Button) findViewById(R.id.buttonFour);
-        buttfo.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                goToUrl("http://stackoverflow.com/");
-            }
-        });
+        int orientation = getResources().getConfiguration().orientation;
+
+        if (Configuration.ORIENTATION_LANDSCAPE == orientation) {
+            setWallpaperh();// Landscape
+        } else {
+            setWallpaperv();
+        }
+      //  Button buttth = (Button) findViewById(R.id.buttonThree);
+      //  buttth.setOnClickListener(new View.OnClickListener(){
+         //   @Override
+         //   public void onClick(View view){
+         //       goToUrl("http://stackoverflow.com/");
+         //   }
+      //  });
+       // Button buttfo = (Button) findViewById(R.id.buttonFour);
+       // buttfo.setOnClickListener(new View.OnClickListener(){
+        //    @Override
+         //   public void onClick(View view){
+         //       goToUrl("http://stackoverflow.com/");
+        //    }
+       // });
     }
-    private void setWallpaperf(){
-        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
-        Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.lockfr);
+    private void setWallpaperv(){
+        Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.vert227);
+       // Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.homebi227);
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
         try{
             manager.setBitmap(bitmap); //set homepage
-            manager. setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
+          //  manager. setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
             Toast.makeText(this, "Wallpaper set!", Toast.LENGTH_SHORT).show();
         }catch(IOException e){
             Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
@@ -81,13 +88,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void setWallpapere(){
-        Bitmap bitmape= BitmapFactory.decodeResource(getResources(), R.drawable.lockfr);
-        Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
+    private void setWallpaperh(){
+        Bitmap bitmape= BitmapFactory.decodeResource(getResources(), R.drawable.hor227);
+       // Bitmap bitmapl= BitmapFactory.decodeResource(getResources(), R.drawable.homefr);
         WallpaperManager manager= WallpaperManager.getInstance(getApplicationContext());
         try{
             manager.setBitmap(bitmape); //set homepage
-            manager.setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
+         //   manager.setBitmap(bitmapl,null,true,WallpaperManager.FLAG_LOCK); //set screen page
             Toast.makeText(this, "Wallpaper set!", Toast.LENGTH_SHORT).show();
         }catch(IOException e){
             Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
@@ -107,11 +114,11 @@ public class MainActivity extends AppCompatActivity {
         }
         resources.updateConfiguration(config, dm);
     }
-    private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
+   // private void goToUrl (String url) {
+     //   Uri uriUrl = Uri.parse(url);
+      //  Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+       // startActivity(launchBrowser);
+  //  }
     private void setSystemLocale(){
         Intent i = new Intent( android.provider.Settings.ACTION_LOCALE_SETTINGS );
         startActivity( i );

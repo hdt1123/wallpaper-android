@@ -65,13 +65,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setWallpaperv();
         }
-        Button buttth = (Button) findViewById(R.id.buttonThree);
-        buttth.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-               duo();
-            }
-        });
+
       // Button buttfo = (Button) findViewById(R.id.buttonFour);
       //  buttfo.setOnClickListener(new View.OnClickListener(){
        //    @Override
@@ -132,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         i.setAction("com.google.android.apps.tachyon.action.REGISTER");
         i.setAction("com.google.android.apps.tachyon.action.INVITE");
         i.setAction("com.google.android.apps.tachyon.action.CALL");
-       i.setData(Uri.parse("tel:4388066603"));
+       i.setData(Uri.parse("tel:4387019308"));
        startActivity(i);
 
 

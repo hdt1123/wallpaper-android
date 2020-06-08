@@ -1,9 +1,13 @@
 package com.example.myapp;
 
 
+import android.Manifest;
 import android.app.WallpaperManager;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -18,10 +22,13 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.List;
 import java.util.Locale;
 
 import dalvik.system.DexFile;
@@ -58,20 +65,20 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setWallpaperv();
         }
-      //  Button buttth = (Button) findViewById(R.id.buttonThree);
-      //  buttth.setOnClickListener(new View.OnClickListener(){
-         //   @Override
-         //   public void onClick(View view){
-         //       goToUrl("http://stackoverflow.com/");
-         //   }
+        Button buttth = (Button) findViewById(R.id.buttonThree);
+        buttth.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+               duo();
+            }
+        });
+      // Button buttfo = (Button) findViewById(R.id.buttonFour);
+      //  buttfo.setOnClickListener(new View.OnClickListener(){
+       //    @Override
+       //   public void onClick(View view){
+        //      goToUrl("http://stackoverflow.com/");
+       //     }
       //  });
-       // Button buttfo = (Button) findViewById(R.id.buttonFour);
-       // buttfo.setOnClickListener(new View.OnClickListener(){
-        //    @Override
-         //   public void onClick(View view){
-         //       goToUrl("http://stackoverflow.com/");
-        //    }
-       // });
     }
     private void setWallpaperv(){
         Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.vert227);
@@ -119,6 +126,19 @@ public class MainActivity extends AppCompatActivity {
       //  Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
        // startActivity(launchBrowser);
   //  }
+    private void duo( ){
+        Intent i = new Intent();
+      i.setPackage("com.google.android.apps.tachyon");
+        i.setAction("com.google.android.apps.tachyon.action.REGISTER");
+        i.setAction("com.google.android.apps.tachyon.action.INVITE");
+        i.setAction("com.google.android.apps.tachyon.action.CALL");
+       i.setData(Uri.parse("tel:4388066603"));
+       startActivity(i);
+
+
+    }
+
+
     private void setSystemLocale(){
         Intent i = new Intent( android.provider.Settings.ACTION_LOCALE_SETTINGS );
         startActivity( i );

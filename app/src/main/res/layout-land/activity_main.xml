@@ -52,27 +52,6 @@
         android:text="English"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp" />
-    <Button
-        android:id="@+id/buttonThree"
-        android:layout_width="274dp"
-        android:layout_height="74dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="215dp"
-        android:layout_marginTop="270dp"
-        android:text="@string/con"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="379dp" />
 
-    <ImageView
-        android:layout_width="74dp"
-        android:layout_height="78dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="275dp"
-        android:layout_marginBottom="48dp"
-        android:src="@drawable/phone" />
 
 </RelativeLayout>
